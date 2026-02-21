@@ -1,0 +1,34 @@
+name: OynamaSuresi
+version: '${project.version}'
+main: com.oynamasuresi.OynamaSuresi
+api-version: '1.20'
+description: Oyun süresi takip eklentisi
+author: OynamaSuresi
+
+commands:
+  sure:
+    description: Oyun sürenizi görün
+    usage: /sure [oyuncu]
+    aliases: [playtime, pt]
+  liderlik:
+    description: En çok oynayan oyuncuları listeler
+    usage: /liderlik [sayfa]
+    aliases: [top, lb]
+  sureadmin:
+    description: Admin komutları
+    usage: /sureadmin <reset|ver|al> <oyuncu> [miktar]
+    permission: oynamasuresi.admin
+
+permissions:
+  oynamasuresi.sure:
+    description: /sure komutunu kullanabilir
+    default: true
+  oynamasuresi.sure.others:
+    description: Başkalarının süresini görebilir
+    default: op
+  oynamasuresi.liderlik:
+    description: /liderlik komutunu kullanabilir
+    default: true
+  oynamasuresi.admin:
+    description: Admin komutlarını kullanabilir
+    default: op

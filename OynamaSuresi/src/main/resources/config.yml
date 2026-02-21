@@ -1,0 +1,44 @@
+# ================================
+#   OynamaSuresi - config.yml
+# ================================
+
+prefix: "&8[&6OynamaSuresi&8] &r"
+
+# Liderlik tablosunda sayfa başına kaç oyuncu gösterilsin
+liderlik-sayfa-boyutu: 10
+
+# Günlük süreyi her gün gece yarısı sıfırla
+gunluk-sifirla: true
+
+# Haftalık süreyi her Pazartesi sıfırla
+haftalik-sifirla: true
+
+# ================================
+#   ÖDÜL SİSTEMİ
+# ================================
+# sure: Toplam oynama süresi (DAKİKA cinsinden)
+# mesaj: Oyuncuya gösterilecek mesaj (&a, &6 vb. renk kodları desteklenir)
+# komutlar: Konsoldan çalıştırılacak komutlar (%player% = oyuncu adı)
+#
+# NOT: Ödüller sadece 1 kere verilir!
+
+oduller:
+  - sure: 60
+    mesaj: "&aİlk 1 saatini tamamladın! 🎉 Ödül kazandın!"
+    komutlar:
+      - "give %player% diamond 3"
+
+  - sure: 300
+    mesaj: "&a5 saate ulaştın! Harika iş!"
+    komutlar:
+      - "give %player% diamond_block 1"
+
+  - sure: 1440
+    mesaj: "&6Toplam 1 gün oynadın! Efsanesin! 🏆"
+    komutlar:
+      - "give %player% netherite_ingot 2"
+
+  - sure: 4320
+    mesaj: "&63 gün oynadın! Sunucunun efsanesisin! 👑"
+    komutlar:
+      - "give %player% netherite_block 1"
